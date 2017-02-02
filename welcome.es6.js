@@ -10,5 +10,5 @@
  */
 
 module.exports = function(message){
-    alert(`Welcome ${message}`);
+    console.log(`Hello 2 ${message}`);
 };
