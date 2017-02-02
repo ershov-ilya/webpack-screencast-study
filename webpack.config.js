@@ -1,3 +1,6 @@
+const webpack = require('webpack');
+const env = process.env.NODE_ENV || 'development';
+
 module.exports={
     entry: "./home.es6",
     output: {
@@ -6,11 +9,15 @@ module.exports={
         library: "home"
     },
 
-    watch: true,
+    watch: env=='development',
 
     watchOptions: {
         aggregateTimeout: 100
     },
 
-    devtool: "source-map"
+    devtool: env=='development'?"source-map":false,
+
+    plugins: [
+        new webpack.EnvironmentPlugin([ 'NODE_ENV' ])
+    ]
 };
