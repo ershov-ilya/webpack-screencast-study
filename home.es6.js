@@ -10,4 +10,6 @@
 
 let welcome = require('./welcome.es6');
 
-welcome("world");
+welcome('back');
+
+module.exports = {welcome};
