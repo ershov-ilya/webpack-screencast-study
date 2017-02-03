@@ -83,16 +83,14 @@ var home =
  * Time: 11:06
  */
 
-//let NODE_ENV = process.env.NODE_ENV;
-
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 exports.default = function (message) {
-  console.log('Welcome the ' + message);
+    console.log('Welcome the ' + message);
 
-  //    console.log('Compile mode: '+ NODE_ENV);
+    console.log('Compile mode: ' + "development");
 };
 
 ;

@@ -21,6 +21,11 @@ module.exports={
         new webpack.EnvironmentPlugin({ 'NODE_ENV':'development' })
     ],
 
+    resolve:{
+        extensions: ["",".js"],
+        modulesDirectories: ["node_modules"]
+    },
+
     module:{
 
         loaders: [{
