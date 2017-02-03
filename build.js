@@ -85,12 +85,11 @@ var home =
 
 var env = "production";
 
-module.exports = function(message){
-    console.log(`Welcome ${message}`);
+module.exports = function (message) {
+    console.log('Welcome the ' + message);
 
-    console.log('Development mode: '+ env);
+    console.log('Compile mode: ' + env);
 };
-
 
 /***/ }),
 /* 1 */
@@ -107,12 +106,11 @@ module.exports = function(message){
  * Time: 11:05
  */
 
-let welcome = __webpack_require__(0);
+var welcome = __webpack_require__(0);
 
 welcome('back');
 
-module.exports = {welcome};
-
+module.exports = { welcome: welcome };
 
 /***/ })
 /******/ ]);

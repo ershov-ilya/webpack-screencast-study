@@ -18,6 +18,15 @@ module.exports={
     devtool: env=='development'?"source-map":false,
 
     plugins: [
-        new webpack.EnvironmentPlugin([ 'NODE_ENV' ])
-    ]
+        new webpack.EnvironmentPlugin({ 'NODE_ENV':'development' })
+    ],
+
+    module:{
+
+        loaders: [{
+            test: /\.es6\.js$/,
+            loader: 'babel-loader?presets[]=es2015'
+        }]
+
+    }
 };
