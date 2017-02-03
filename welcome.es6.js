@@ -9,10 +9,10 @@
  * Time: 11:06
  */
 
-let env = process.env.NODE_ENV;
+//let NODE_ENV = process.env.NODE_ENV;
 
-module.exports = function(message){
+export default function(message){
     console.log(`Welcome the ${message}`);
 
-    console.log('Compile mode: '+ env);
+//    console.log('Compile mode: '+ NODE_ENV);
 };

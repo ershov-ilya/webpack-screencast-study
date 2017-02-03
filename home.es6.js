@@ -8,7 +8,7 @@
  * Time: 11:05
  */
 
-let welcome = require('./welcome.es6');
+import welcome from './welcome.es6.js';
 
 welcome('back');
 
