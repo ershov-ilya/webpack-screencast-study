@@ -1,5 +1,7 @@
 const webpack = require('webpack');
+console.log('process.env.NODE_ENV: ',process.env.NODE_ENV);
 const env = process.env.NODE_ENV || 'development';
+console.log('env: ',env);
 
 module.exports={
     entry: "./home.es6",
@@ -9,7 +11,7 @@ module.exports={
         library: "home"
     },
 
-    watch: env=='development',
+    //watch: env=='development', // watch в режиме development
 
     watchOptions: {
         aggregateTimeout: 100
@@ -21,10 +23,10 @@ module.exports={
         new webpack.EnvironmentPlugin({ 'NODE_ENV':'development' })
     ],
 
-    resolve:{
-        extensions: ["",".js"],
-        modulesDirectories: ["node_modules"]
-    },
+    //resolve:{
+    //    extensions: ["",".js"]
+        //modulesDirectories: ["node_modules"]
+    //},
 
     module:{
 
